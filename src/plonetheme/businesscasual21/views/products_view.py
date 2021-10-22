@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from plone.app.contenttypes.browser.collection import CollectionView
+
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 # from plonetheme.businesscasual21 import _
 

@@ -57,8 +57,8 @@
               </section>
             </tal:loop>
 
-      </metal:block>
-    </metal:content-core>
-  </body>
-</html>
+          </metal:block>
+        </metal:content-core>
+      </body>
+    </html>
 
