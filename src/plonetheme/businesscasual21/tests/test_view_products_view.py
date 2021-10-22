@@ -20,11 +20,11 @@ class ViewsIntegrationTest(unittest.TestCase):
         self.portal = self.layer["portal"]
         setRoles(self.portal, TEST_USER_ID, ["Manager"])
         api.content.create(self.portal, "Folder", "other-folder")
-        api.content.create(self.portal, "Document", "front-page")
+        api.content.create(self.portal, "Collection", "products")
 
     def test_products_view_is_registered(self):
         view = getMultiAdapter(
-            (self.portal["other-folder"], self.portal.REQUEST), name="products-view"
+            (self.portal["products"], self.portal.REQUEST), name="products-view"
         )
         self.assertTrue(view.__name__ == "products-view")
         # self.assertTrue(
@@ -35,7 +35,7 @@ class ViewsIntegrationTest(unittest.TestCase):
     def test_products_view_not_matching_interface(self):
         with self.assertRaises(ComponentLookupError):
             getMultiAdapter(
-                (self.portal["front-page"], self.portal.REQUEST), name="products-view"
+                (self.portal["other-folder"], self.portal.REQUEST), name="products-view"
             )
 
 
