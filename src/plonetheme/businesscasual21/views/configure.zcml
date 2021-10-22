@@ -8,7 +8,7 @@
 
   <browser:page
     name="products-view"
-    for="Products.CMFCore.interfaces.IFolderish"
+    for="plone.app.contenttypes.interfaces.ICollection"
     class=".products_view.ProductsView"
     template="products_view.pt"
     permission="zope2.View"

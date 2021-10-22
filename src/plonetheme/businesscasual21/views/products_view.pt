@@ -1,18 +1,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="plonetheme.businesscasual21"
-      metal:use-macro="context/main_template/macros/master">
-<body>
-  <metal:content-core fill-slot="content-core">
-  <metal:block define-macro="content-core">
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="plonetheme.startbootstrapbusinesscasual21"
+  metal:use-macro="context/main_template/macros/master">
+  <body>
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
 
-      <h2 i18n:translate="">Sample View</h2>
-      <!--<div tal:replace="view/my_custom_view_method" />-->
-      <!--<div tal:replace="context/my_custom_field" />-->
+        <tal:loop repeat="item view/results">
 
-  </metal:block>
-  </metal:content-core>
-</body>
+          <section class="page-section"
+            tal:condition="repeat/item/odd">
+            <div class="container">
+              <div class="product-item">
+                <div class="product-item-title d-flex">
+                  <div class="bg-faded p-5 d-flex ms-auto rounded">
+                    <h2 class="section-heading mb-0">
+                      <span class="section-heading-upper">${item/description}</span>
+                      <span class="section-heading-lower">${item/title}</span>
+                    </h2>
+                  </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                  src="${item/getPath}/@@images/photo/large"
+                  alt="...">
+                  <div class="product-item-description d-flex me-auto">
+                    <div class="bg-faded p-5 rounded"
+                      tal:content="structure item/text/output"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="page-section"
+              tal:condition="repeat/item/even">
+              <div class="container">
+                <div class="product-item">
+                  <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex me-auto rounded">
+                      <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">${item/description}</span>
+                        <span class="section-heading-lower">${item/title}</span>
+                      </h2>
+                    </div>
+                  </div>
+                  <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                    src="${item/getPath}/@@images/photo/large"
+                    alt="...">
+                    <div class="product-item-description d-flex ms-auto">
+                      <div class="bg-faded p-5 rounded"
+                        tal:content="structure item/text/output"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </tal:loop>
+
+      </metal:block>
+    </metal:content-core>
+  </body>
 </html>
+
