@@ -81,8 +81,12 @@
       <after
         theme-children="/html/head"
         content="/html/head/script"
-        css:if-not-content="html > body.userrole-anonymous"
         />
+      <!-- <after
+        theme-children="/html/head"
+        content="/html/head/script"
+        css:if-not-content="html > body.userrole-anonymous"
+        /> -->
 
       <!--
         Add theme javascripts here, to have them at the bottom of all javascripts.
@@ -99,7 +103,7 @@
             require = undefined;
             define = undefined;
         </script>
-      </after
+      </after>
     </rules>
 
     <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
@@ -122,13 +126,13 @@
       /> -->
 
     <!-- Copy global nav (portal tabs) -->
-    <!-- <replace css:theme-children=".navbar-nav" css:content="#portal-globalnav > li" /> -->
+    <replace css:theme-children=".navbar-nav" css:content-children=".navbar-nav" />
 
     <!-- Copy breadcrumb bar -->
     <!-- <replace css:content="#viewlet-above-content" css:theme="#above-content" /> -->
 
     <!-- Copy Alert message -->
-    <!-- <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" /> -->
+    <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
 
     <!-- Copy Plone navigation portlet -->
     <!-- <replace
@@ -149,10 +153,16 @@
       /> -->
 
     <!-- Copy Document Content -->
-    <!-- <replace
-      css:content-children="#content"
-      css:theme-children="#content"
-      /> -->
+    <replace
+      css:content="#content-core"
+      css:theme-children="main"
+      />
+
+    <replace
+      css:content-children="footer"
+      css:theme-children="footer"
+      />
+
 
     <!-- Drop icons in footer -->
     <!-- <drop css:theme="#footer .icons" /> -->

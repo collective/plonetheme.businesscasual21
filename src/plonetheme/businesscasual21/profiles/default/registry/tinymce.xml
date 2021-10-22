@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <registry>
 
-
   <record name="plone.templates" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="templates">
     <field type="plone.registry.field.Text">
       <default></default>
@@ -10,13 +9,16 @@
       <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_tinymce_templates">Templates</title>
     </field>
     <value>[
-      {"title": "BS Pricing", "url": "++theme++{{{ theme.normalized_name }}}/tinymce-templates/bs-pricing.html"},
-      {"title": "BS Hero: Dark", "url": "++theme++{{{ theme.normalized_name }}}/tinymce-templates/bs-dark-hero.html"},
-      {"title": "BS Hero: left-aligned with image", "url": "++theme++{{{ theme.normalized_name }}}/tinymce-templates/bs-hero-left.html"}
+      {"title": "BS Pricing", "url": "++theme++business-casual-2021/tinymce-templates/bs-pricing.html"},
+      {"title": "BS Hero: Dark", "url": "++theme++business-casual-2021/tinymce-templates/bs-dark-hero.html"},
+      {"title": "BS Hero: left-aligned with image", "url": "++theme++business-casual-2021/tinymce-templates/bs-hero-left.html"},
+      {"title": "Section: Intro", "url": "++theme++business-casual-2021/tinymce-templates/section-intro.html"},
+      {"title": "Section: About", "url": "++theme++business-casual-2021/tinymce-templates/section-about.html"},
+      {"title": "Section: Promise", "url": "++theme++business-casual-2021/tinymce-templates/section-promise.html"},
+      {"title": "Section: Opening Hours", "url": "++theme++business-casual-2021/tinymce-templates/section-opening-hours.html"}
       ]
     </value>
   </record>
-
 
   <record name="plone.custom_plugins" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="custom_plugins">
     <field type="plone.registry.field.List">
@@ -30,5 +32,17 @@
       <element>template|++plone++static/components/tinymce-builded/js/tinymce/plugins/template</element>
     </value>
   </record>
+
+ <!-- <records interface="Products.CMFPlone.interfaces.controlpanel.IFilterSchema" prefix="plone">
+    <value key="custom_attributes" purge="false">
+      <element></element>
+    </value>
+  </records> -->
+
+  <records interface="Products.CMFPlone.interfaces.controlpanel.IFilterSchema" prefix="plone">
+    <value key="valid_tags" purge="false">
+      <element>button</element>
+    </value>
+  </records>
 
 </registry>

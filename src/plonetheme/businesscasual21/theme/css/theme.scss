@@ -1,0 +1,35 @@
+@import "bootstrap/scss/bootstrap-grid";
+@import "styles";
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+$grid-main-breakpoint: md!default;
+$nav-main-breakpoint: $grid-main-breakpoint!default;
+
+
+#parent-fieldname-text > *:not(.mceTmpl), .entries > article, #content-core > .item, #content-core > p, #content-core .field{
+  max-width: 75%;
+  margin: 0 auto;
+  @extend .bg-faded;
+  @extend .rounded;
+  @extend .p-5;
+}
+
+.nav-item{
+  @extend .px-lg-4;
+}
+
+.nav-link{
+  @extend .text-uppercase;
+}
+
+#global_statusmessage{
+  margin-top: 1rem;
+}
+
+footer{
+  margin-top: 3rem;
+}
+
