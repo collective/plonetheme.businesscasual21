@@ -31,33 +31,23 @@
 plonetheme.businesscasual21
 ===========================
 
-Tell me what your product does
+Bootstrap 5 theme for Plone 6, based on startbootstrap.com theme Business Casual in version 2021.
 
 Features
 --------
 
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+- Provides a Plone 6 theme
+- Provides a Product content type
+- Provides a Products view for a Collection
+- Provides TinyMCE templates for some of the more complex page content
 
 
 Documentation
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+This is the result of the Plone 6 Theming Training (Diazo Theme).
+A step by step guide can be found here: https://training.plone.org/5/theming/theme_diazo.html
 
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
 
 
 Installation
@@ -79,7 +69,7 @@ and then running ``bin/buildout``
 Authors
 -------
 
-Provided by awesome people ;)
+Maik Derstappen - MrTango md@derico.de
 
 
 Contributors
@@ -95,14 +85,13 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/plonetheme.businesscasual21/issues
 - Source Code: https://github.com/collective/plonetheme.businesscasual21
-- Documentation: https://docs.plone.org/foo/bar
+- Documentation: https://training.plone.org/5/theming/theme_diazo.html
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License
